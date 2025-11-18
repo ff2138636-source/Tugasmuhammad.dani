@@ -1,0 +1,317 @@
+<!doctype html>
+
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Web Sekolah Keren — SMK/SMA Kreatif</title>
+  <meta name="description" content="Website sekolah modern: profil, program, kalender kegiatan, galeri, dan pendaftaran online." />
+  <meta name="author" content="Sekolah Kreatif" />  <!-- Google Fonts -->  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">  <style>
+    :root{
+      --bg:#f8fafc; --card:#ffffff; --muted:#64748b; --accent:#4f46e5; --glass:rgba(255,255,255,0.7);
+      --radius:14px; --container:1100px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#eef2ff 0%,var(--bg) 60%);color:#0f172a;}
+    .container{max-width:var(--container);margin:0 auto;padding:28px}
+    header{backdrop-filter:blur(6px);background:rgba(255,255,255,0.6);position:sticky;top:0;z-index:40;border-bottom:1px solid rgba(15,23,42,0.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),#06b6d4);color:#fff;font-weight:800}
+    nav ul{display:flex;gap:18px;align-items:center;margin:0;padding:0;list-style:none}
+    a{color:inherit;text-decoration:none}
+    .cta{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;font-weight:600}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr;gap:28px;align-items:center;padding:48px 0}
+    .h-title{font-size:clamp(28px,4.5vw,44px);line-height:1.02;font-weight:800}
+    .h-sub{color:var(--muted);margin-top:12px}
+    .hero-actions{margin-top:18px;display:flex;gap:12px}
+    .card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 6px 22px rgba(2,6,23,0.06);}
+
+    /* Grid */
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+
+    /* Sections */
+    section{padding:42px 0}
+    h2{margin:0 0 12px 0;font-size:20px}
+    p.lead{color:var(--muted);margin:0}
+
+    /* Programs */
+    .program{padding:18px;border-radius:12px;border:1px solid rgba(15,23,42,0.04);}
+
+    /* Events */
+    .event-date{font-size:13px;color:var(--muted)}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+    .gallery img{width:100%;height:120px;object-fit:cover;border-radius:10px}
+
+    /* Form */
+    label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+    input,select,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(15,23,42,0.08);font-size:14px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;font-weight:700;border:none;cursor:pointer}
+
+    footer{background:#0f172a;color:#e6eef8;padding:28px;border-top-left-radius:20px;border-top-right-radius:20px}
+
+    /* Responsive */
+    @media (min-width:860px){
+      .hero{grid-template-columns:1fr 520px}
+      .gallery img{height:160px}
+    }
+    @media (max-width:760px){
+      nav ul{display:none}
+      .mobile-menu{display:inline-block}
+      .grid-3{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+    }
+
+    /* Small helpers */
+    .muted{color:var(--muted)}
+    .pill{background:rgba(79,70,229,0.08);color:var(--accent);padding:6px 10px;border-radius:999px;font-weight:600}
+  </style></head>
+<body>  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">SMK</div>
+        <div>
+          <div style="font-weight:800">SMKN 1 TANGGEUNG</div>
+          <div style="font-size:12px;color:var(--muted)">SMK SIAP KERJA.</div>
+        </div>
+      </div><nav>
+    <ul>
+      <li><a href="#about">Tentang</a></li>
+      <li><a href="#programs">Program</a></li>
+      <li><a href="#events">Kegiatan</a></li>
+      <li><a href="#admissions">Pendaftaran</a></li>
+    </ul>
+  </nav>
+
+  <div style="display:flex;gap:10px;align-items:center">
+    <a class="pill" href="#open-day">Open Day</a>
+    <a class="cta" href="#contact">Hubungi</a>
+    <button class="mobile-menu" aria-label="Open menu" style="display:none;background:transparent;border:none">☰</button>
+  </div>
+</div>
+
+  </header>  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="card">
+          <div class="h-title">SELAMAT DATANG DI Website BY DANZz dev (TEST) </div>
+          <p class="h-sub">Desain modern, akses cepat, dan pengalaman yang membuat murid, orang tua, dan guru bersemangat. Termasuk galeri, kalender kegiatan, dan formulir pendaftaran online.</p><div class="hero-actions">
+        <a href="#admissions" class="btn">Daftar Sekarang</a>
+        <a href="#programs" style="padding:10px 14px;border-radius:10px;border:1px solid rgba(15,23,42,0.06);font-weight:700">Lihat Program</a>
+      </div>
+
+      <div style="display:flex;gap:12px;margin-top:18px">
+        <div class="card" style="flex:1">
+          <div style="font-size:12px;color:var(--muted)">Rasio Guru-Murid</div>
+          <div style="font-weight:800;font-size:20px">1 : 12</div>
+        </div>
+        <div class="card" style="flex:1">
+          <div style="font-size:12px;color:var(--muted)">Ruang Kelas</div>
+          <div style="font-weight:800;font-size:20px">35+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div style="border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(2,6,23,0.12)">
+      <img src="https://k.top4top.io/p_3609hehlq0.jpg" alt="Sekolah" style="width:100%;height:360px;object-fit:cover;display:block">
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="card">
+    <h2>Tentang Sekolah</h2>
+    <p class="lead">Kami menggabungkan kurikulum nasional dengan project-based learning, literasi digital, dan penguatan karakter. Visi: menjadi pusat pendidikan inovatif yang mempersiapkan pemimpin masa depan.</p>
+
+    <div style="margin-top:18px;display:grid;grid-template-columns:1fr 260px;gap:18px">
+      <div>
+        <div class="grid-3">
+          <div class="program">
+            <h3 style="margin-top:0">Fasilitas Modern</h3>
+            <p class="muted">Lab komputer, perpustakaan digital, maker-space.</p>
+          </div>
+          <div class="program">
+            <h3 style="margin-top:0">Program Ekstra</h3>
+            <p class="muted">Coding club, debat, paduan suara.</p>
+          </div>
+          <div class="program">
+            <h3 style="margin-top:0">Pembelajaran</h3>
+            <p class="muted">Project-based learning & mentoring intensif.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h3 style="margin-top:0">Visi & Misi</h3>
+        <strong>Visi</strong>
+        <p class="muted">Menjadi pusat pendidikan inovatif yang mempersiapkan pemimpin masa depan.</p>
+        <strong>Misi</strong>
+        <ol class="muted">
+          <li>Mendorong kreativitas dan pemikiran kritis</li>
+          <li>Mengembangkan kompetensi digital</li>
+          <li>Membangun karakter melalui kegiatan sosial</li>
+        </ol>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section id="programs">
+  <h2>Program Unggulan</h2>
+  <p class="lead">Program dirancang untuk mengembangkan keterampilan abad 21 dan kompetensi vokasional.</p>
+
+  <div style="margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px">
+    <div class="program card">
+      <h3 style="margin-top:0">Sains & Teknologi</h3>
+      <p class="muted">Laboratorium modern, robotika, coding, dan lomba sains.</p>
+    </div>
+    <div class="program card">
+      <h3 style="margin-top:0">Seni & Kreativitas</h3>
+      <p class="muted">Studio musik, teater, seni visual, dan pameran karya siswa.</p>
+    </div>
+    <div class="program card">
+      <h3 style="margin-top:0">Olahraga & Kesehatan</h3>
+      <p class="muted">Lapangan terpadu, pelatih bersertifikat, dan program kebugaran.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events">
+  <h2>Kalender Kegiatan</h2>
+  <div style="margin-top:12px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px">
+    <div class="card">
+      <div class="event-date">10 Maret 2026</div>
+      <div style="font-weight:700;margin-top:6px">Pentas Seni Tahunan</div>
+    </div>
+    <div class="card">
+      <div class="event-date">21 Mei 2026</div>
+      <div style="font-weight:700;margin-top:6px">Lomba Sains Antar Sekolah</div>
+    </div>
+    <div class="card">
+      <div class="event-date">17 Agustus 2026</div>
+      <div style="font-weight:700;margin-top:6px">Peringatan Hari Kemerdekaan</div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <h2>Galeri</h2>
+  <div class="gallery" style="margin-top:12px">
+    <img src="https://c.top4top.io/p_360996pli0.png" alt="Siswa 1">
+    <img src="https://f.top4top.io/p_3609zo5590.png" alt="Siswa 2">
+    <img src="https://g.top4top.io/p_3609t0j7h1.png" alt="Laboratorium">
+    <img src="https://c.top4top.io/p_3609bji0k0.png" alt="Kegiatan Olahraga">
+  </div>
+</section>
+
+<!-- ADMISSIONS -->
+<section id="admissions">
+  <h2>Pendaftaran Online</h2>
+  <div style="margin-top:12px;display:grid;grid-template-columns:1fr 360px;gap:18px">
+    <div class="card">
+      <form id="applyForm">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div>
+            <label for="name">Nama Lengkap</label>
+            <input id="name" name="name" required placeholder="Nama lengkap" />
+          </div>
+          <div>
+            <label for="phone">Nomor Telepon</label>
+            <input id="phone" name="phone" required placeholder="08xx..." />
+          </div>
+        </div>
+
+        <div style="margin-top:12px">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="email@contoh.com" />
+        </div>
+
+        <div style="margin-top:12px">
+          <label for="program">Program Pilihan</label>
+          <select id="program" name="program">
+            <option>Sains & Teknologi</option>
+            <option>Seni & Kreativitas</option>
+            <option>Olahraga & Kesehatan</option>
+          </select>
+        </div>
+
+        <div style="margin-top:12px">
+          <label for="note">Pertanyaan / Catatan</label>
+          <textarea id="note" name="note" rows="4" placeholder="Tulis pesan singkat..."></textarea>
+        </div>
+
+        <div style="margin-top:14px;display:flex;gap:10px">
+          <button type="submit" class="btn">Kirim Permintaan</button>
+          <button type="button" onclick="downloadBrosur()" style="padding:10px 14px;border-radius:10px;border:1px solid rgba(15,23,42,0.06)">Unduh Brosur</button>
+        </div>
+      </form>
+    </div>
+
+    <aside class="card">
+      <h3 style="margin-top:0">Open Day — Kunjungi Kami</h3>
+      <p class="muted">Datang dan rasakan suasana belajar; demo project siswa dan tur fasilitas.</p>
+      <div style="margin-top:12px">
+        <a class="btn" href="#" style="display:inline-block">Daftar Kunjungan</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+  </main>  <!-- FOOTER -->  <footer>
+    <div class="container" style="display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between">
+      <div style="max-width:480px">
+        <div style="font-weight:800">Kontak Sekolah</div>
+        <div class="muted" style="margin-top:6px">Tanggeung, Kec. Tanggeung, Kabupaten Cianjur, Jawa Barat 43267</div>
+        <div style="margin-top:8px">Telp: +62 857-2162-0147 · Email: danikasep211@gmail.com</div>
+      </div><div style="min-width:220px">
+    <div style="font-weight:700">Jam Operasional</div>
+    <div class="muted">Senin - Jumat: 06:30 - 14:30 · Sabtu: Libur</div>
+  </div>
+
+  <div style="min-width:220px">
+    <div style="font-weight:700">Newsletter</div>
+    <div style="margin-top:8px;display:flex;gap:8px">
+      <input placeholder="Email Anda" style="padding:8px;border-radius:10px;border:none;min-width:160px" />
+      <button class="btn">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<div style="text-align:center;margin-top:18px;opacity:0.8">© DANZz dev <span id="year"></span> SMK NEGRI 1 TANGGEUNG — Semua hak cipta dilindungi.</div>
+
+  </footer>  <script>
+    // Small interactivity: form handling, year, download dummy brosur
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.getElementById('applyForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const data = new FormData(e.target);
+      // Simulasi: tampilkan ringkasan pendaftaran
+      alert('Terima kasih, ' + data.get('name') + '! Permintaan pendaftaran telah dikirim.');
+      e.target.reset();
+    });
+
+    function downloadBrosur(){
+      // Membuat brosur PDF sederhana (dummy). Di produksi, ganti link ke file server.
+      const blob = new Blob([`SMK 1 TANGGEUNG \n\nBrosur Sekolah - Hubungi: danikasep211@gmail.com`], {type:'text/plain'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'brosur_sekolah.txt';
+      document.body.appendChild(a); a.click(); a.remove();
+      URL.revokeObjectURL(url);
+    }
+  </script></body>
+</html>
